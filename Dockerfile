@@ -23,7 +23,7 @@ LABEL org.label-schema.name="Java API Tracker Docker images" \
 VOLUME /workspace
 WORKDIR /workspace
 
-RUN apk add --no-cache binutils curl make perl gnuplot
+RUN apk add --no-cache binutils curl make perl gnuplot file
 RUN \
   wget -q -O - "https://github.com/lvc/japi-compliance-checker/archive/${JAPI_COMPLIANCE_CHECKER_VERSION}.tar.gz" | tar -C /tmp -xzf - && \
   cd "/tmp/japi-compliance-checker-${JAPI_COMPLIANCE_CHECKER_VERSION}" && \
